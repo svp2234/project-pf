@@ -1,0 +1,12 @@
+body{
+background-color:yellow;
+}
+.d {
+color:green;
+background-color:grey;
+font-weight:bold;
+border-radius:50px;
+width:50%;
+padding:10px;
+margin:200px;
+}
