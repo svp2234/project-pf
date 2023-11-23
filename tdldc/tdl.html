@@ -1,1 +1,97 @@
+<html>
+<head><title>tdl</title>
+<style>
+body{
+background-color:black;
+}
+#Digital{
+		position:absolute;
+                color:lime;
+                top:50%;
+                left:50%;
+                transform:translateX(-2%) translateY(750%);
+                font-size:25px;
+                font-family:Orbitron;
+                letter-spacing: 2px;
+}
+li{
+color:blue;
+font-size:20px;
+}
+#box{
+border:solid blue 5px;
+}
+#hi{
+background-image:url("./t.jpg");
+background-repeat:no-repeat;
+}
+</style>
+</head>
+<body>
+<div id="Digital"></div>
+<br>
+<div id="hi">
+<div>
+<form>
+<div>
+<input type="text" placeholder="todo item" id="box">
+</div>
+<br>
+<div>
+<input type="button" value="Add" onclick="add_item()">
+<br>
+</div>
+</form>
+</div>
+<div>
+<ul id="list_item">
 
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+function showTime(){
+var date=new Date();
+var d=date.getDay();
+var mo=date.getMonth();
+var dn=date.getDate();
+var y=date.getFullYear();
+var h=date.getHours();
+var m=date.getMinutes();
+var s=date.getSeconds();
+var period="AM";
+
+if(h==0){
+	h=12;}
+if(h>12){
+	h=h-12;
+	period="PM";}
+h=(h<10)?"0"+h:h;
+m=(m<10)?"0"+m:m;
+s=(s<10)?"0"+s:s;
+dn=(dn<10)?"0"+dn:dn;
+var months=["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var week=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.getElementById("Digital").innerHTML=week[d]+" "+months[mo]+" "+dn+" "+y+" "+h+":"+m+":"+s+""+period;
+setTimeout(showTime,1000);
+}
+showTime();
+
+function add_item(){
+ let item=document.getElementById("box");
+ let list_item=document.getElementById("list_item");
+ if(item.value!=""){
+	let make_li=document.createElement("li");
+	make_li.appendChild(document.createTextNode(item.value));
+	list_item.appendChild(make_li);
+	item.value=""
+
+	make_li.onclick=function(){
+		this.parentNode.removeChild(this);}
+}
+else{
+alert("please add an value to item");}
+}
+</script>
+</body>
+</html>
