@@ -1,1 +1,268 @@
+<html>
+<head><title>Periodic table</title>
+<style>
+    body{
+    background-color: #012;
+}
+.Clock{
+    position:fixed;
+    color:lime;
+    top:50%;
+    left:50%;
+    transform:translateX(230%) translateY(-3700%);
+    font-size:30px;
+    font-family:Orbitron;
+    letter-spacing: 4px;
+}
+.hi{
+    background-color: aquamarine;
+    width:50%;
 
+    font-size: 60px;
+    color: #F012BE;
+    text-align: center;
+    text-shadow: 1px 1px 1px grey;
+    font-size: 30px;
+    font-weight: bold;
+    padding:10px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background: rgba(23, 8, 233, 0.568);
+    box-shadow: 0 8px 32px 0 rgba(55, 38, 135, 0.9);
+    backdrop-filter: blur( 19.5px );
+    -webkit-backdrop-filter: blur( 19.5px );
+    border-radius: 10px;
+    border: 10px solid rgba(21, 31, 22, 0.9);
+}
+h1{
+    color: blue;
+    text-align: center;
+    text-decoration-color: blue;
+}
+td{
+    font-weight: bold;
+    text-align: center;
+box-shadow: 0 8px 32px 0 rgba(80, 77, 92, 0.918);
+backdrop-filter: blur( 19.5px );
+-webkit-backdrop-filter: blur( 19.5px );
+border-radius: 5px;
+border: 5px solid rgba(10, 1, 1, 0.9);
+}
+td:hover{
+    transform: scale(1.5);
+}
+table.t2{
+    width: 1000px;
+    height: 165px;
+    text-align: center;
+    table-layout:fixed;
+    padding: 10px 20px;
+    margin:10px 20px ;
+    background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba(55, 38, 135, 0.9);
+backdrop-filter: blur( 19.5px );
+-webkit-backdrop-filter: blur( 19.5px );
+border-radius: 10px;
+border: 10px solid rgba(21, 31, 22, 0.9);
+    
+}
+table.t1{
+    width: 1200px;
+    height: 500px;
+    text-align: center;
+    table-layout: fixed;
+    padding: 10px 20px;
+    margin:10px 20px ;
+    background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 55, 38, 135, 0.9 );
+backdrop-filter: blur( 19.5px );
+-webkit-backdrop-filter: blur( 19.5px );
+border-radius: 10px;
+border: 10px solid rgba( 21, 31, 22, 0.9 );
+}
+</style>
+</head>
+<body>
+<div class="hi">THE MODERN PERIODIC TABLE</div>
+<div id="DigitalClock" class="Clock"></div>
+<center>
+<table style="empty-cells:hide" class="t1" cellspace="50" cellpadding="12">
+<tr>
+<td bgcolor="blue">H</td>
+<td colspan="16"></td>
+<td bgcolor="green">He</td>
+</tr>
+<tr>
+<td bgcolor="red">Li</td>
+<td bgcolor="indigo">Be</td>
+<td colspan="10"></td>
+<td bgcolor="violet">B</td>
+<td bgcolor="sky blue">C</td>
+<td bgcolor="orange">N</td>
+<td bgcolor="cyan">O</td>
+<td bgcolor="purple">F</td>
+<td bgcolor="yellow">Ne</td>
+</tr>
+<tr>
+<td bgcolor="aqua">Na</td>
+<td bgcolor="fuchsia">Mg</td>
+<td colspan="10"></td>
+<td bgcolor="gray">Al</td>
+<td bgcolor="lime">Si</td>
+<td bgcolor="maroon">P</td>
+<td bgcolor="navy">Si</td>
+<td bgcolor="olive">Cl</td>
+<td bgcolor="silver">Ar</td>
+</tr>
+<tr>
+<td bgcolor="teal">K</td>
+<td bgcolor="aquamarine">Ca</td>
+<td bgcolor="brown">Sc</td>
+<td bgcolor="burlywood">Ti</td>
+<td bgcolor="blueviolet">V</td>
+<td bgcolor="cadetblue">Cr</td>
+<td bgcolor="chartreuse">Mn</td>
+<td bgcolor="chocolate">Fe</td>
+<td bgcolor="coral">Co</td>
+<td bgcolor="cornflowerblue">Ni</td>
+<td bgcolor="lightpink">Cu</td>
+<td bgcolor="crimson">Zn</td>
+<td bgcolor="darkcyan">Ga</td>
+<td bgcolor="darkblue">Ge</td>
+<td bgcolor="darkgoldenrod">As</td>
+<td bgcolor="darkgray">Se</td>
+<td bgcolor="darkgreen">Br</td>
+<td bgcolor="darkkhaki">Kr</td>
+</tr>
+<tr>
+<td bgcolor="darkmagenta">Rb</td>
+<td bgcolor="darkolivegreen">Sr</td>
+<td bgcolor="darhorange">Y</td>
+<td bgcolor="darkred">Zr</td>
+<td bgcolor="darkorchid">Nb</td>
+<td bgcolor="darksalmon">Mo</td>
+<td bgcolor="darkseagreen">Tc</td>
+<td bgcolor="darkslateblue">Ru</td>
+<td bgcolor="darkslategray">Rh</td>
+<td bgcolor="darkturquoise">Pd</td>
+<td bgcolor="darkviolet">Ag</td>
+<td bgcolor="deeppink">Cd</td>
+<td bgcolor="deepskyblue">In</td>
+<td bgcolor="dimgray">Sn</td>
+<td bgcolor="dodgerblue">Sb</td>
+<td bgcolor="firebrick">Te</td>
+<td bgcolor="forestgreen">I</td>
+<td bgcolor="gainsboro">Xe</td>
+</tr>
+<tr>
+<td bgcolor="gold">Cs</td>
+<td bgcolor="goldenrod">Ba</td>
+<td bgcolor="gray">La</td>
+<td bgcolor="greenyellow">Hf</td>
+<td bgcolor="honeydew">Ta</td>
+<td bgcolor="hotpink">W</td>
+<td bgcolor="indianred">Re</td>
+<td bgcolor="lawngreen">Os</td>
+<td bgcolor="khaki">Ir</td>
+<td bgcolor="lightblue">Pt</td>
+<td bgcolor="lightcoral">Au</td>
+<td bgcolor="lightcyan">Hg</td>
+<td bgcolor="lightgoldenrodyellow">Tl</td>
+<td bgcolor="lightgreen">Pb</td>
+<td bgcolor="lightgray">Bi</td>
+<td bgcolor="lightpink">Po</td>
+<td bgcolor="lightsalmon">At</td>
+<td bgcolor="lightseagreen">Rn</td>
+</tr>
+<tr>
+<td bgcolor="lightslategray">Fr</td>
+<td bgcolor="lightskyblue">Ra</td>
+<td bgcolor="limegreen">Ac</td>
+<td bgcolor="lightsteelblue">Rf</td>
+<td bgcolor="tan">Db</td>
+<td bgcolor="mediumorchid">Sg</td>
+<td bgcolor="peru">Bh</td>
+<td bgcolor="mediumpurple">Hs</td>
+<td bgcolor="orchid">Mt</td>
+<td bgcolor="midnightblue">Ds</td>
+<td bgcolor="royalblue">Rg</td>
+<td bgcolor="rosybrown">Cn</td>
+<td bgcolor="salmon">Nh</td>
+<td bgcolor="sandybrown">Fl</td>
+<td bgcolor="seagreen">Mc</td>
+<td bgcolor="sienna">Lv</td>
+<td bgcolor="slateblue">Ts</td>
+<td bgcolor="steelblue">Og</td>
+</tr>
+</table></center>
+<center><table class="t2" cellpadding="12">
+<tr>
+<td bgcolor="cyan">Ce</td>
+<td bgcolor="magenta">Pr</td>
+<td bgcolor="red">Nd</td>
+<td bgcolor="purple">Pm</td>
+<td bgcolor="green">Sm</td>
+<td bgcolor="sienna">Eu</td>
+<td bgcolor="mediumorchid">Gd</td>
+<td bgcolor="rosybrown">Tb</td>
+<td bgcolor="lightcoral">Dy</td>
+<td bgcolor="seagreen">Ho</td>
+<td bgcolor="tan">Er</td>
+<td bgcolor="orange">Tm</td>
+<td bgcolor="gold">Yb</td>
+<td bgcolor="blue">Lu</td>
+</tr>
+<tr>
+<td bgcolor="violet">Th</td>
+<td bgcolor="darkgreen">Pa</td>
+<td bgcolor="purple">U</td>
+<td bgcolor="yellow">Np</td>
+<td bgcolor="darkblue">Pu</td>
+<td bgcolor="red">Am</td>
+<td bgcolor="skyblue">Cm</td>
+<td bgcolor="lightgreen">Bk</td>
+<td bgcolor="pink">Cf</td>
+<td bgcolor="hotpink">Es</td>
+<td bgcolor="honeydew">Fm</td>
+<td bgcolor="khaki">Md</td>
+<td bgcolor="dodgerblue">No</td>
+<td bgcolor="firebrick">Lr</td>
+</tr>
+</table></center>
+<script type="text/javascript">
+    function showTime(){
+        var date=new Date();
+        var h= date.getHours();
+        var m=date.getMinutes();
+        var s=date.getSeconds();
+        var session="AM";
+
+        if(h==0){
+            h=12;
+        }
+        if(h>12){
+            h=h-12;
+            session="PM";
+        }
+        /*if(h<10){
+            h="0"+h;
+        }
+        if(m<10){
+            m="0"+m;
+        }
+        if(s<10){
+            s="0"+s;
+        }*/
+        h=(h<10)?"0"+h:h;
+        m=(m<10)?"0"+m:m;
+        s=(s<10)?"0"+s:s;
+        document.getElementById("DigitalClock").innerHTML=h+":"+m+":"+s+""+session;
+
+        setTimeout(showTime,1000);
+    }
+    showTime();
+    </script>
+</body>
+</html>
