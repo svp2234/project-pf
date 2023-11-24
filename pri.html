@@ -1,0 +1,312 @@
+<html>
+<head><title>Number Finder</title>
+<style>
+    #prim,#prim1,#prim2,#prim3{
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .btn1{
+        color:red;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+    .btn2{
+        color:blueviolet;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .btn3{
+        color:orangered;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .btn4{
+        color:magenta;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .btn5{
+        color:blue;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+</style>
+
+</head>
+<body bgcolor="lime">
+
+<h1>Finding Characteristics of the given number</h1>    
+
+<input type="number" id="prim">
+</br></br>
+<input type="button" value="prime" onclick="myTe();" class="btn1">
+<span id="ans"></span>&nbsp;&nbsp;
+<input type="button" value="palindrome" onclick="myKe();" class="btn2">
+<span id="res1"></span>&nbsp;&nbsp;
+<input type="button" value="armstrong" onclick="myMe();" class="btn3">
+<span id="res2"></span></br><br>
+<input type="button" value="strong" onclick="myRe();" class="btn4">
+<span id="res3"></span>&nbsp;&nbsp;
+<input type="button" value="perfect" onclick="myGe();" class="btn5">
+<span id="res4"></span><br>
+
+<img src="./nf.jpg" align="right" width="30%">
+
+<h1>Numbers upto given number</h1>
+
+<input type="number" id="prim3"><br><br>
+<input type="button" value="primen" onclick="myAe();" class="btn1">&nbsp;&nbsp;
+<input type="button" value="palindromen" onclick="myCe();" class="btn2"><br><br>
+<input type="button" value="armstrongn" onclick="myHe();" class="btn3">&nbsp;&nbsp;
+<input type="button" value="strongn" onclick="myZe();" class="btn4"><br><br>
+<input type="button" value="perfectn" onclick="myJe();" class="btn5"><br>
+
+<h1>Numbers between the given two numbers</h1>
+
+<input type="number" id="prim1">
+<input type="number" id="prim2"><br><br>
+<input type="button" value="aprimen" onclick="myBe();" class="btn1">&nbsp;&nbsp;
+<input type="button" value="apalindromen" onclick="myNe();" class="btn2">&nbsp;&nbsp;
+<input type="button" value="aarmstrongn" onclick="myXe();" class="btn3"><br><br>
+<input type="button" value="astrongn" onclick="myWe();" class="btn4">&nbsp;&nbsp;
+<input type="button" value="aperfectn" onclick="myVe();" class="btn5"><br>
+<script type="text/javascript">
+
+function myTe() {
+let n=Number(document.getElementById("prim").value);
+var i=2; c=0;
+while(i<n){
+if(n%i==0){
+c+=1;}
+i++;
+}
+if(c>=1){
+document.getElementById("ans").innerHTML=n+" is not a prime";
+}
+else if(n===1){
+document.getElementById("ans").innerHTML=n+" is neither prime nor composite";
+}
+else{
+document.getElementById("ans").innerHTML=n+" is prime";}
+}
+
+
+function myKe(){
+let n=Number(document.getElementById("prim").value);
+var k=n,s=0,r;
+while(n>0) {
+r=n%10;
+s=s*10+r;
+n=parseInt(n/10);}
+if(k==s) {
+document.getElementById("res1").innerHTML=k+" is palindrome";}
+else {
+document.getElementById("res1").innerHTML=k+" is not a palindrome";}
+}
+
+function myMe() {
+let n=Number(document.getElementById("prim").value);
+var k=n,s=0,r;
+var c=n.toString().length;
+while(n>0){
+r=n%10;
+s=s+Math.pow(r,c);
+n=parseInt(n/10);
+}
+if(k==s) {
+document.getElementById("res2").innerHTML=k+" is armstrong";}
+else {
+document.getElementById("res2").innerHTML=k+" is not a armstrong";}
+}
+
+function myRe() {
+let n=Number(document.getElementById("prim").value);
+var c=0,r;
+var k=n;
+while(n>0){
+var i=1,s=1;
+r=n%10;
+while(i<=r){
+s=s*i;
+i++;
+}
+c=c+s;
+n=parseInt(n/10);
+}
+if(k==c) {
+document.getElementById("res3").innerHTML=k+" is strong";}
+else {
+document.getElementById("res3").innerHTML=k+" is not a strong";}
+}
+
+function myGe() {
+let n=Number(document.getElementById("prim").value);
+var i=1,c=0;
+
+while(i<n){
+if(n%i==0){
+c=c+i;
+}
+i++;
+}
+if(n==c) {
+document.getElementById("res4").innerHTML=n+" is perfect";}
+else {
+document.getElementById("res4").innerHTML=n+" is not a perfect";}
+}
+
+function myAe() {
+let n=Number(document.getElementById("prim3").value);
+var isPrime;
+for(var j=2;j<=n;j++) {
+isPrime=1;
+for(var i=2; i<=j/2;i++) {
+if(j%i==0){
+isPrime=0;
+break;}}
+if(isPrime==1){
+document.write(j+"<br>");}}}
+
+function myCe(){
+let n=Number(document.getElementById("prim3").value);
+for(var i=1;i<=n;i++) {
+var k=i,s=0,r;
+while(k>0) {
+r=k%10;
+s=s*10+r;
+k=parseInt(k/10);}
+if(i==s) {
+document.write(i+"<br>");}}}
+
+function myHe() {
+let n=Number(document.getElementById("prim3").value);
+for(var i=1;i<=n;i++) {
+var k=i,s=0,r;
+var c=n.toString().length;
+while(k>0){
+r=k%10;
+s=s+Math.pow(r,c);
+k=parseInt(k/10);
+}
+if(i==s) {
+document.write(i+"<br>");}
+}}
+
+function myZe() {
+let n=Number(document.getElementById("prim3").value);
+for(var j=1;j<=n;j++) {
+var c=0,r;
+var k=j;
+while(k>0){
+var i=1,s=1;
+r=k%10;
+while(i<=r){
+s=s*i;
+i++;
+}
+c=c+s;
+k=parseInt(k/10);
+}
+if(j==c) {
+document.write(j+"<br>");}
+}}
+
+function myJe() {
+let n=Number(document.getElementById("prim3").value);
+for(var j=1;j<=n;j++) {
+var i=1,c=0;
+
+while(i<j){
+if(j%i==0){
+c=c+i;
+}
+i++;
+}
+if(j==c) {
+document.write(j+"<br>");}
+}}
+
+function myBe() {
+let n1=Number(document.getElementById("prim1").value);
+let n2=Number(document.getElementById("prim2").value);
+var isPrime;
+for(var j=n1;j<=n2;j++) {
+isPrime=1;
+for(var i=2; i<=j/2;i++) {
+if(j%i==0){
+isPrime=0;
+break;}}
+if(isPrime==1){
+document.write(j+"<br>");}}}
+
+function myNe(){
+let n1=Number(document.getElementById("prim1").value);
+let n2=Number(document.getElementById("prim2").value);
+for(var i=n1;i<=n2;i++) {
+var k=i,s=0,r;
+while(k>0) {
+r=k%10;
+s=s*10+r;
+k=parseInt(k/10);}
+if(i==s) {
+document.write(i+"<br>");}}}
+
+function myXe() {
+let n1=Number(document.getElementById("prim1").value);
+let n2=Number(document.getElementById("prim2").value);
+for(var i=n1;i<=n2;i++) {
+var k=i,s=0,r;
+var c=k.toString().length;
+while(k>0){
+r=k%10;
+s=s+Math.pow(r,c);
+k=parseInt(k/10);
+}
+if(i==s) {
+document.write(i+"<br>");}
+}}
+
+function myWe() {
+let n1=Number(document.getElementById("prim1").value);
+let n2=Number(document.getElementById("prim2").value);
+for(var j=n1;j<=n2;j++) {
+var c=0,r;
+var k=j;
+while(k>0){
+var i=1,s=1;
+r=k%10;
+while(i<=r){
+s=s*i;
+i++;
+}
+c=c+s;
+k=parseInt(k/10);
+}
+if(j==c) {
+document.write(j+"<br>");}
+}}
+
+function myVe() {
+let n1=Number(document.getElementById("prim1").value);
+let n2=Number(document.getElementById("prim2").value);
+for(var j=n1;j<=n2;j++) {
+var i=1,c=0;
+
+while(i<j){
+if(j%i==0){
+c=c+i;
+}
+i++;
+}
+if(j==c) {
+document.write(j+"<br>");}
+}}
+
+</script>
+</body>
+</html>
