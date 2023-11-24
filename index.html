@@ -1,8 +1,173 @@
 <html>
     <head>
         <title>pf</title>
+        <style>
+            body{
+    font-family: 'PT Sans',sans-serif;
+    background-color: #252529;
+    margin: 0;
+    color: #fff;
+    line-height: 1.6;
+}
+#cf{
+    text-decoration: none;
+    color: #ccc;
+}
+#showcase{
+    margin: 0;
+    padding: 0;
+    background: url('developer.png') no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+#showcase .container{
+    margin-top: 25vh;
+}
+#showcase h1{
+    font-size: 4rem;
+    margin: 0;
+
+}
+#showcase h2{
+    font-size: 2rem;  
+}
+nav{
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: rgb(51,34,34);
+    position:fixed;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    display: inline;
+    float: left;
+}
+nav a{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+}
+nav li:hover{
+    background-color: #444;
+}
+.container{
+    max-width: 1180px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+    color: white;
+}
+.lead{
+    font-size:1.3rem ;
+}
+footer .footer-cols{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 2rem;
+    text-align: left;
+    font-size: 14px;
+}
+footer .footer-cols ul{
+    list-style: none;
+}
+footer .footer-cols a{
+    text-decoration: none;
+    color: #eee;
+}
+footer .footer-cols ul li:first-child{
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: #444 solid 2px;
+    margin-bottom: 1rem;
+}
+footer .footer-bottom{
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+.ld{
+    color:greenyellow;
+}
+.ind{
+    margin: 0;
+    padding: 0;
+    background: url('ct.jpg') no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+        </style>
     </head>
     <body>
-        <a href="pro.html" target="_blank"><h1><center>Projects</center></h1></a>
+        <!---->
+        <div id="showcase">
+            <header>
+                <nav class="cf">
+                    <ul class="cf">
+                        <li>
+                            <a href="#showcase">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutus">About</a>
+                        </li>
+                        <li>
+                            <a href="#indoor">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#history">Contact</a>
+                        </li>
+                    </ul>
+                </nav>  
+            </header>
+            <div class="section-main container">
+                <br><br><br><br><br><br>
+                <h2><i>I'm Prasad</i></h2>
+                <h2>a Web Designer</h2>
+            </div>
+        </div>
+        <div class="ind">
+        <section id="aboutus" class="section">
+            <div class="container">
+                <br><br><br><br><br><br><h2>About</h2>
+                Hello.This is <b>Prasad</b>,a <b>Web Developer.</b><br>
+                    " I create beautiful designs that makes difference. "
+            </div>
+        </section>
+        <section id="indoor" class="section">
+        <div class="section-main container">
+            <h2><i>What do i do</i></h2>
+            I create Resposive web applications that are<br> <b>compatable, functional</b> and <b>well appealing.</b><br><br>
+            <h2><i class="ld">Skills that i excel at</i></h2>
+            <i>HTML, CSS, JavaScript, ReactJs, Python, C, Java</i>
+            <h3><i class="ld"><a href="pro.html" target="_blank"><center><font color="lime">My Projects</font></center></a></i></h3><br><br>
+        </div>
+    </section>
+    <section id="history" class="section">
+        <div class="section-main container">
+            If you want to contact me or if you need any help<br> with <b>Front End Development</b> you can always reach me .
+        </div>
+    </section>
+</div>
+        <footer>
+            <div class="container">
+                <div class="footer-cols">
+                   
+                <div class="footer-bottom">
+                    Copyright&copy; SVP
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
